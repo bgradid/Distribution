@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @technician.name %>
+</p>
+
+<p>
+  <b>Long name:</b>
+  <%= @technician.long_name %>
+</p>
+
+<p>
+  <b>Recent count:</b>
+  <%= @technician.recent_count %>
+</p>
+
+<p>
+  <b>Recent ram count:</b>
+  <%= @technician.recent_ram_count %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%= @technician.count %>
+</p>
+
+<p>
+  <b>Ram count:</b>
+  <%= @technician.ram_count %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @technician.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_technician_path(@technician) %> |
+<%= link_to 'Back', technicians_path %>

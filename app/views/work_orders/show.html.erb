@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @work_order.number %>
+</p>
+
+<p>
+  <b>Assigned:</b>
+  <%= @work_order.assigned %>
+</p>
+
+<p>
+  <b>Ramupgrade:</b>
+  <%= @work_order.ramupgrade %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%= @work_order.details %>
+</p>
+
+<p>
+  <b>Technician:</b>
+  <%= @work_order.send(:toname) %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_work_order_path(@work_order) %> |
+<%= link_to 'Back', work_orders_path %>

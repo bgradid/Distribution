@@ -1,0 +1,35 @@
+<h1>Listing work_orders</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Assigned</th>
+    <th>Ramupgrade</th>
+    <th>Details</th>
+    <th>Technician</th>
+    <th>Created At</th>
+    <th></th>
+    <th></th>
+	<th></th>
+  </tr>
+
+<% @work_orders.each do |work_order| %>
+  <tr>
+    <td><%= work_order.number %></td>
+    <td><%= work_order.assigned %></td>
+    <td><%= work_order.ramupgrade %></td>
+    <td><%= work_order.details %></td>
+    <td><%= work_order.send(:toname) %></td>
+	<td><%= work_order.created_at.in_time_zone('Pacific Time (US & Canada)').strftime("%I:%M%p on %m/%d/%Y") %></td>
+    <td><%= link_to 'Show', work_order %></td>
+    <td><%= link_to 'Edit', edit_work_order_path(work_order) %></td>
+    <td><%= link_to 'Destroy', work_order, :confirm => 'Are you sure?', :method => :delete %></td>
+	<!-- <td><%= link_to 'Assign', edit_work_order_path(work_order) %></td> -->
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+
+<%= link_to 'New Work order', new_work_order_path %>

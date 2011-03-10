@@ -1,0 +1,41 @@
+<%= form_for(@work_order) do |f| %>
+  <% if @work_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@work_order.errors.count, "error") %> prohibited this work_order from being saved:</h2>
+
+      <ul>
+      <% @work_order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :assigned %><br />
+    <%= f.check_box :assigned %>
+  </div>
+  <div class="field">
+    <%= f.label :ramupgrade %><br />
+    <%= f.check_box :ramupgrade %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br />
+    <%= f.text_field :details %>
+  </div>
+  <div class="field">
+	<%= f.label :created_at %><br />
+	<%= f.text_field :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :technician %><br />
+	<%= f.select(:technician, [["XBG", 1],["XJR", 2],["XKU", 3]], {:include_blank => true} )%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

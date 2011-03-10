@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  number: 1
+  assigned: false
+  ramupgrade: false
+  details: MyString
+  technician: MyString
+
+two:
+  number: 1
+  assigned: false
+  ramupgrade: false
+  details: MyString
+  technician: MyString

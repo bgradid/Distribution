@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  long_name: MyString
+  recent_count: 
+  recent_ram_count: 
+  count: 
+  ram_count: 
+  active: false
+
+two:
+  name: MyString
+  long_name: MyString
+  recent_count: 
+  recent_ram_count: 
+  count: 
+  ram_count: 
+  active: false

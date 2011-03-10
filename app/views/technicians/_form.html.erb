@@ -1,0 +1,45 @@
+<%= form_for(@technician) do |f| %>
+  <% if @technician.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@technician.errors.count, "error") %> prohibited this technician from being saved:</h2>
+
+      <ul>
+      <% @technician.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :long_name %><br />
+    <%= f.text_field :long_name %>
+  </div>
+  <div class="field">
+    <%= f.label :recent_count %><br />
+    <%= f.text_field :recent_count %>
+  </div>
+  <div class="field">
+    <%= f.label :recent_ram_count %><br />
+    <%= f.text_field :recent_ram_count %>
+  </div>
+  <div class="field">
+    <%= f.label :count %><br />
+    <%= f.text_field :count %>
+  </div>
+  <div class="field">
+    <%= f.label :ram_count %><br />
+    <%= f.text_field :ram_count %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<h1>Listing technicians</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Long name</th>
+    <th>Recent count</th>
+    <th>Recent ram count</th>
+    <th>Count</th>
+    <th>Ram count</th>
+    <th>Active</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @technicians.each do |technician| %>
+  <tr>
+    <td><%= technician.name %></td>
+    <td><%= technician.long_name %></td>
+    <td><%= technician.recent_count %></td>
+    <td><%= technician.recent_ram_count %></td>
+    <td><%= technician.count %></td>
+    <td><%= technician.ram_count %></td>
+    <td><%= technician.active %></td>
+    <td><%= link_to 'Show', technician %></td>
+    <td><%= link_to 'Edit', edit_technician_path(technician) %></td>
+    <td><%= link_to 'Destroy', technician, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Technician', new_technician_path %>
